@@ -188,3 +188,111 @@ button:hover,
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ===== INSTAGRAM CONTACT ===== */
+
+.instagram-contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+
+  margin-top: 30px;
+  padding: 28px;
+
+  background: #15161a;
+  border: 1px solid #34353b;
+  border-left: 4px solid #f5d000;
+  border-radius: 14px;
+
+  color: #f5f5f5;
+}
+
+.instagram-info {
+  flex: 1;
+  min-width: 220px;
+}
+
+.instagram-label {
+  color: #f5d000;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.instagram-info h3 {
+  margin: 10px 0;
+  font-size: 22px;
+}
+
+.instagram-info p {
+  margin: 0;
+  color: #bfc0c6;
+  line-height: 1.7;
+}
+
+.instagram-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 14px 20px;
+  border: 1px solid #f5d000;
+  border-radius: 9px;
+
+  background: #f5d000;
+  color: #101114;
+
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.instagram-icon {
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+}
+
+.instagram-arrow {
+  font-size: 19px;
+}
+
+.instagram-button:hover {
+  background: #ffe84d;
+  transform: translateY(-3px);
+  box-shadow: 0 7px 22px #f5d00035;
+}
+
+.instagram-button:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .instagram-contact {
+    padding: 22px;
+  }
+
+  .instagram-button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .instagram-button {
+    transition: none;
+  }
+
+  .instagram-button:hover {
+    transform: none;
+  }
+}
+
