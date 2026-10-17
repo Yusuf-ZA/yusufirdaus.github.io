@@ -101,3 +101,90 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== FOOTBALL PORTFOLIO EFFECTS ===== */
+
+/* Animasi masuk dari bawah */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Cahaya kuning pada judul */
+@keyframes yellowGlow {
+  0%, 100% {
+    text-shadow: 0 0 5px #f5d000;
+  }
+  50% {
+    text-shadow: 0 0 18px #f5d000;
+  }
+}
+
+/* Efek masuk pada judul utama */
+.hero h1 {
+  animation: fadeUp 0.9s ease-out both;
+}
+
+/* Efek cahaya pada nomor punggung */
+.jersey-number {
+  animation: yellowGlow 2.5s ease-in-out infinite;
+}
+
+/* Kartu terangkat saat kursor diarahkan */
+.about-card,
+.skill-card,
+.gallery-item {
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.about-card:hover,
+.skill-card:hover,
+.gallery-item:hover {
+  transform: translateY(-7px);
+  border-color: #f5d000;
+  box-shadow: 0 8px 25px #f5d00022;
+}
+
+/* Efek warna pada tautan navigasi */
+nav a {
+  transition: color 0.25s ease;
+}
+
+nav a:hover {
+  color: #f5d000;
+}
+
+/* Efek sorotan pada tombol */
+button,
+.btn {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+button:hover,
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 18px #f5d00030;
+}
+
+/* Mengurangi animasi jika diminta perangkat */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
